@@ -1,0 +1,70 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: white;
+    color: #202124;
+    margin: 0;
+}
+
+.hunt {
+    display: flex;
+    justify-content: center;
+    height: calc(100vh - 70px);
+}
+
+.mapaCaça {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-image: url("../img/hunt_bg.png");
+    background-size: cover;
+    background-position: center;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.ocult {
+    display: none;
+}
+
+.missatgeCaça {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #d93b38;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+.popupCaça {
+    position: absolute;
+    top: 120px;
+    right: 40px;
+    background-color: white;
+    padding: 12px;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.imgSombra {
+    width: 80px;
+    height: 80px;
+}
+
+.silueta {
+    filter: brightness(0);
+}
+
+button {
+    margin-top: 8px;
+    padding: 6px 12px;
+    border: none;
+    border-radius: 20px;
+    background-color: #d93b38;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+}
