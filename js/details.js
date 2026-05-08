@@ -3,21 +3,20 @@ const contenidorDetalls = document.querySelector('#pokemonDetail');
 document.addEventListener('DOMContentLoaded', prepDetalls);
 
 async function prepDetalls() {
-    carrega();
 
     try {
         const params = new URLSearchParams(window.location.search);
         const pokemonId = params.get('id');
 
         if (!pokemonId) {
-            verError('No s’ha trobat cap Pokémon.');
+            verError('No hem vist cap Pokémon.');
             return;
         }
 
         const pokemon = await fetchPokemon(pokemonId);
 
         if (!pokemon) {
-            verError('No s’ha pogut carregar el Pokémon.');
+            verError('No vol sortir el Pokémon.');
             return;
         }
 
@@ -43,7 +42,7 @@ async function prepDetalls() {
 
     } catch (error) {
         console.error(error);
-        verError('Hi ha hagut un error carregant el detall.');
+        verError('Ara no pots veure al POkemon, prova més tard.');
     }
 }
 
@@ -80,7 +79,7 @@ function materialitzarlPokeDetalls(pokemon, evolutionChain, moves) {
     profilePanel.classList.add('detail-panel', 'profile-panel');
 
     const profileTitle = document.createElement('h2');
-    profileTitle.textContent = 'Perfil';
+    profileTitle.textContent = 'Dades';
 
     profilePanel.appendChild(profileTitle);
     profilePanel.appendChild(ferPerfil(pokemon));
@@ -89,7 +88,7 @@ function materialitzarlPokeDetalls(pokemon, evolutionChain, moves) {
     abilitiesPanel.classList.add('detail-panel', 'abilities-panel');
 
     const abilitiesTitle = document.createElement('h2');
-    abilitiesTitle.textContent = 'Habilitats';
+    abilitiesTitle.textContent = 'Especialitats';
 
     const abilitiesText = document.createElement('p');
 
@@ -139,16 +138,16 @@ function ferPerfil(pokemon) {
     }
 
     if (attack) {
-        section.appendChild(ferBarritas('Atac', attack.base_stat));
+        section.appendChild(ferBarritas('Agressió', attack.base_stat));
     }
 
     const height = document.createElement('p');
     height.classList.add('profile-line');
-    height.textContent = `Alçada: ${pokemon.height / 10} m`;
+    height.textContent = `Llarg: ${pokemon.height / 10} m`;
 
     const weight = document.createElement('p');
     weight.classList.add('profile-line');
-    weight.textContent = `Pes: ${pokemon.weight / 10} kg`;
+    weight.textContent = `Fondo: ${pokemon.weight / 10} kg`;
 
     section.appendChild(height);
     section.appendChild(weight);
@@ -190,7 +189,7 @@ function ferTaulaMovis(moves) {
     section.classList.add('moves-section');
 
     const title = document.createElement('h2');
-    title.textContent = 'Moviments';
+    title.textContent = 'Cops de puny';
     section.appendChild(title);
 
     const table = document.createElement('table');
@@ -199,13 +198,13 @@ function ferTaulaMovis(moves) {
     const headerRow = document.createElement('tr');
 
     const nameHeader = document.createElement('th');
-    nameHeader.textContent = 'Atac';
-
-    const typeHeader = document.createElement('th');
-    typeHeader.textContent = 'Tipus';
+    nameHeader.textContent = 'Agressió';
 
     const powerHeader = document.createElement('th');
-    powerHeader.textContent = 'Poder';
+    powerHeader.textContent = 'Valor de l\'agressió';
+
+    const typeHeader = document.createElement('th');
+    typeHeader.textContent = 'Tipinet';
 
     headerRow.appendChild(nameHeader);
     headerRow.appendChild(typeHeader);
@@ -246,7 +245,7 @@ function ferTaulaEvolus(evolutionChain) {
     section.classList.add('evolution-section');
 
     const title = document.createElement('h2');
-    title.textContent = 'Evolució';
+    title.textContent = 'Cadena evolutiva';
     section.appendChild(title);
 
     const list = document.createElement('ul');
@@ -254,7 +253,7 @@ function ferTaulaEvolus(evolutionChain) {
 
     if (!evolutionChain) {
         const item = document.createElement('li');
-        item.textContent = 'No hi ha dades d’evolució.';
+        item.textContent = 'No evolució :c.';
         list.appendChild(item);
         section.appendChild(list);
         return section;
@@ -284,16 +283,6 @@ function aconseguirNomsEvolus(chain) {
     }
 
     return names;
-}
-
-function carrega() {
-    contenidorDetalls.textContent = '';
-
-    const loading = document.createElement('p');
-    loading.textContent = 'Carregant detall del Pokémon...';
-    loading.classList.add('loading');
-
-    contenidorDetalls.appendChild(loading);
 }
 
 function verError(messageText) {

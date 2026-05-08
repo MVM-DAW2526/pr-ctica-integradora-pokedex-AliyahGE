@@ -6,7 +6,6 @@ let losPOkemon = [];
 document.addEventListener('DOMContentLoaded', inici);
 
 async function inici() {
-    carrega();
 
     const pokemonList = await fetchPokemonList();
 
@@ -45,7 +44,7 @@ function materialitzarPokeGrid(pokemonList) {
 
     if (pokemonList.length === 0) {
         const message = document.createElement('p');
-        message.textContent = 'No s’ha trobat cap Pokémon.';
+        message.textContent = 'No hi han Pokemons ara.';
         message.classList.add('no-results');
         grids.appendChild(message);
         return;
@@ -99,15 +98,6 @@ function materialitzarCromo(pokemon) {
 
 function IdPokemon(id) {
     return `#${String(id).padStart(3, '0')}`;
-}
-
-function carrega() {
-    grids.textContent = '';
-
-    const loading = document.createElement('p');
-    loading.textContent = 'Carregant Pokémon...';
-    loading.classList.add('loading');
-    grids.appendChild(loading);
 }
 
 function primeraMayus(text) {
