@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <title>Els meus Pokemons</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/my_pokemons.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="https://img.icons8.com/color/48/pokeball--v1.png" alt="Pokeball">
+            <h1>PokéDex</h1>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Inici</a></li>
+                <li><a href="my_pokemons.html">Els meus Pokemons</a></li>
+                <li><a href="hunt.html">Caça</a></li>
+            </ul>
+        </nav>
+    </header>
+<main class="collection-page">
+    <section class="toolbar">
+        <div class="sort-controls">
+            <span>Ordenar:</span>
+
+            <select id="ordreN0m">
+                <option value="">Nom</option>
+                <option value="asc">A-Z</option>
+                <option value="desc">Z-A</option>
+            </select>
+
+            <select id="ordreNivell">
+                <option value="">Nivell</option>
+                <option value="asc">Ascendent</option>
+                <option value="desc">Descendent</option>
+            </select>
+
+            <select id="ordreNum">
+                <option value="">Número</option>
+                <option value="asc">Ascendent</option>
+                <option value="desc">Descendent</option>
+            </select>
+        </div>
+
+        <a class="add-button" href="hunt.html">Afegir Nou Pokemoncete</a>
+    </section>
+
+    <section id="grids" class="collection-grid"></section>
+</main>
+
+<script src="js/storage.js"></script>
+<script src="js/my_pokemons.js"></script>
+
+</body>
+</html>

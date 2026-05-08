@@ -1,0 +1,112 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: white;
+    color: black;
+    margin: 0;
+}
+
+.baralla-main {
+    height: calc(100vh - 70px);
+    display: flex;
+    justify-content: center;
+}
+
+.baralla-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-image: url("../img/battle_bg.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.zona-pokemon-malo {
+    position: absolute;
+    top: 205px;
+    right: 200px;
+}
+
+.zona-meu-pokemon {
+    position: absolute;
+    left: 200px;
+    bottom: 156px;
+}
+
+.pokemonMalo {
+    width: 180px;
+}
+
+.pokemon-meu {
+    width: 200px;
+}
+
+.info-malo,
+.info-meu {
+    background-color: white;
+    border: 1px solid BLACK;
+    border-radius: 40px;
+    align-content: center;
+    padding: 0px 60px;
+    min-width: 3px;
+    font-weight: bold;
+}
+
+.info-malo {
+    margin-bottom: 5px;
+}
+
+.info-meu {
+    margin-top: 5PX;
+}
+
+.info-malo p,
+.info-meu p {
+    margin: 5px ;
+}
+
+.opcions {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 130px;
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 10px;
+    padding: 10px;
+}
+
+.seleccio-opcions,
+.narrador {
+    background-color: black;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.seleccio-opcions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+button {
+    border: 2px solid #a6a6a6;
+    border-radius: 20px;
+    background-color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#btnAtacar {
+    background-color: #df3f3f;
+    border-color: #bc0202;
+    color: white;
+}
+
+.narrador {
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: white;
+    padding: 20px 20px;
+}

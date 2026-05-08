@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ca">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Caça</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/hunt.css">
+</head>
+
+<body>
+
+<header>
+    <div class="logo-container">
+        <img src="https://img.icons8.com/color/48/pokeball--v1.png" alt="Pokeball">
+        <h1>PokéDex</h1>
+    </div>
+    <nav>
+        <ul class="nav-links">
+            <li><a href="index.html">Inici</a></li>
+            <li><a href="my_pokemons.html">Els meus Pokemons</a></li>
+            <li><a href="hunt.html" class="active">Caça</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main class="hunt">
+
+    <section id="mapaCaça" class="mapaCaça">
+
+        <p class="missatgeCaça">
+            A per els Pokemons salvatges!
+        </p>
+
+        <div id="popupCaça" class="popupCaça">
+            <p>Ha aparegut un POkémon salvatge!</p>
+
+            <img id="imgSombra" class="imgSombra">
+
+            <button id="btnVeure">Veure</button>
+            <button id="btnLluitar" class="ocult">Lluita >:c</button>
+        </div>
+
+    </section>
+
+</main>
+
+<script src="js/api.js"></script>
+<script src="js/storage.js"></script>
+<script src="js/hunt.js"></script>
+
+</body>
+</html>

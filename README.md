@@ -1,0 +1,4 @@
+[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/qgY9QXhY)
+Este proyecto es una Pokédex donde puedes ver los primeros 151 Pokémon usando la PokéAPI. En la página principal puedes buscarlos por nombre o número y al clicar ves el detalle. También hay una parte de caza donde aparece un Pokémon salvaje y puedes luchar contra él. Si ganas, se guarda y luego sale en “Els meus Pokémon”.
+Los datos se cargan con fetch y se guardan usando localStorage y sessionStorage. Hay varias páginas (index, details, hunt, battle y my_pokemons) y cada una hace su parte. La batalla es bastante simple, va por turnos y ya.
+Para probarlo bien, tienes que ir primero a la página de caza y desde ahí entrar a la batalla, porque si no no hay Pokémon cargado.

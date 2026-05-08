@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ca">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Baralla</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/battle.css">
+</head>
+
+<body>
+
+<header>
+    <div class="logo-container">
+        <img src="https://img.icons8.com/color/48/pokeball--v1.png" alt="Pokeball">
+        <h1>PokéDex</h1>
+    </div>
+    <nav>
+        <ul class="nav-links">
+            <li><a href="index.html">Inici</a></li>
+            <li><a href="my_pokemons.html">Els meus Pokemons</a></li>
+            <li><a href="hunt.html">Caça</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main class="baralla-main">
+    <section class="baralla-container">
+
+        <div class="zona-pokemon-malo">
+            <div class="info-malo">
+                <p id="nomPokemon2">Pokemon de carrer</p>
+                <p id="vidaPokemon2">HP:</p>
+            </div>
+            <img id="imgPokemon2" class="pokemonMalo" alt="PokemonMalo">
+        </div>
+
+        <div class="zona-meu-pokemon">
+            <img id="imgPokemon1" class="pokemon-meu" alt="El meu Pokemon">
+            <div class="info-meu">
+                <p id="nomPokemon1">El meu Pokemon</p>
+                <p id="vidaPokemon1">HP:</p>
+            </div>
+        </div>
+
+        <div class="opcions">
+            <div class="seleccio-opcions">
+                <button id="btnAtacar">Agressió</button>
+                <button>Inventari</button>
+                <button>Canviar</button>
+                <button onclick="window.location.href='hunt.html'">Fugida</button>
+            </div>
+
+            <div class="narrador">
+                <p id="missatgeBaralla">Què fem ara...?</p>
+            </div>
+        </div>
+
+    </section>
+</main>
+
+<script src="js/api.js"></script>
+<script src="js/storage.js"></script>
+<script src="js/pokemon.js"></script>
+<script src="js/battleEngine.js"></script>
+<script src="js/battle.js"></script>
+
+</body>
+</html>
